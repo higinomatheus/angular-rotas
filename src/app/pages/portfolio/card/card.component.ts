@@ -12,15 +12,15 @@ export class CardComponent implements OnInit {
         this.activatedRoute.params.subscribe((params) => console.log(params));
 
         // http://localhost:4200/portfolio/{param1}/{param2}
-        this.activatedRoute.firstChild?.params.subscribe((params) => console.log(params));
+        this.activatedRoute.firstChild?.params.subscribe((params) => console.log('params',params));
 
         // URL com query params: http://localhost:4200/portfolio/{id}?param1=value1&param2=value2
-        this.activatedRoute.queryParams.subscribe((queryParams) => console.log(queryParams));
+        this.activatedRoute.queryParams.subscribe((queryParams) => console.log('queryParams', queryParams));
     }
 
     ngOnInit(){
-        setInterval(() => {
-            this.router.navigate(['/']);
-        }, 5000);
+        // setInterval(() => {
+        //     this.router.navigate(['/']);
+        // }, 5000);
     }
 }
